@@ -5,7 +5,7 @@ export default {
   getSiteProps: () => ({
     title: 'React Static',
   }),
-  siteRoot: 'https://codeblock.io',
+  siteRoot: 'https://alpha.codeblock.io',
   getRoutes: async () => {
     const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
     return [
