@@ -2,13 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
-// Your top level component
+// Top level component
 import App from './App'
 
-// Export your top level component as JSX (for static rendering)
+// Export top level component as JSX (for static rendering)
 export default App
 
-// Render your app
+// Render app
 if (typeof document !== 'undefined') {
   const render = Comp => {
     ReactDOM.hydrate(
