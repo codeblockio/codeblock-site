@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default {
   getSiteProps: () => ({
-    title: 'React Static',
+    title: 'CodeBlock | Everything-as-Code',
   }),
   siteRoot: 'https://alpha.codeblock.io',
   getRoutes: async () => {
@@ -12,24 +12,6 @@ export default {
       {
         path: '/',
         component: 'src/containers/Home',
-      },
-      {
-        path: '/about',
-        component: 'src/containers/About',
-      },
-      {
-        path: '/blog',
-        component: 'src/containers/Blog',
-        getProps: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: 'src/containers/Post',
-          getProps: () => ({
-            post,
-          }),
-        })),
       },
       {
         is404: true,
