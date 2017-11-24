@@ -1,5 +1,4 @@
 import axios from 'axios'
-//
 
 export default {
   getSiteProps: () => ({
@@ -7,7 +6,6 @@ export default {
   }),
   siteRoot: 'https://alpha.codeblock.io',
   getRoutes: async () => {
-    const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
     return [
       {
         path: '/',
