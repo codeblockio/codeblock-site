@@ -25,10 +25,6 @@ import './app.css'
 
 import Home from './containers/Home'
 
-/* Heads up!
- * Neither Semantic UI, nor Semantic UI React don't offer a responsive navbar, hover it can be easily implemented.
- * It can be more complicated, but you can create really flexible markup.
- */
 class DesktopContainer extends Component {
   state = {}
 
@@ -45,7 +41,7 @@ class DesktopContainer extends Component {
           <Segment inverted textAlign='center' style={{ padding: '1em 0em' }} vertical>
             <Menu
               fixed={fixed ? 'top' : null}
-              inverted={!fixed}
+              inverted
               pointing={!fixed}
               secondary={!fixed}
               size='large'
