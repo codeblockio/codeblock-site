@@ -94,7 +94,7 @@ class MobileContainer extends Component {
             <Menu.Item as={NavLink} to='/about' exact>About</Menu.Item>
           </Sidebar>
 
-          <Sidebar.Pusher dimmed={sidebarOpened} style={{ minHeight: '100vh' }} onClick={this.handleClose}>
+          <Sidebar.Pusher dimmed={sidebarOpened} style={{ minHeight: '100vh' }}>
             <Segment inverted textAlign='center' style={{ padding: '1em 0em' }} vertical>
               <Container>
                 <Menu inverted pointing secondary size='large'>
