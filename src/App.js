@@ -47,13 +47,11 @@ export default class App extends React.Component {
       <Router>
         <div>
           { visible ? <FixedMenu/> : null }
-
           <Visibility
             onBottomPassed={this.showFixedMenu}
             onBottomVisible={this.hideFixedMenu}
             once={false}
           >
-
             <Segment
               inverted
               textAlign='center'
@@ -63,14 +61,7 @@ export default class App extends React.Component {
             >
               <Container>
                 <Menu inverted pointing secondary size='large'>
-                  <Menu.Item as='a' header>
-                    <Image
-                      size='mini'
-                      src={logo}
-                      style={{ marginRight: '1.5em' }}
-                    />
-                    CodeBlock
-                  </Menu.Item>
+                  <Menu.Item header as='a'>Home</Menu.Item>
                   <Menu.Item as='a'>Vision</Menu.Item>
                   <Menu.Item as='a'>Product</Menu.Item>
                   <Menu.Item as='a'>Training</Menu.Item>
@@ -82,7 +73,6 @@ export default class App extends React.Component {
                   </Menu.Item>
                 </Menu>
               </Container>
-
               <Segment style={{background: 'transparent', minHeight: '90vh', display: 'flex', justifyContent: 'center' }}>
                 <Container text>
                   <Header
@@ -103,10 +93,8 @@ export default class App extends React.Component {
                   </Button>
                 </Container>
               </Segment>
-
             </Segment>
           </Visibility>
-
           <Container text style={{ marginTop: '7em' }}>
             <Routes />
           </Container>
