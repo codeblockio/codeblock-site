@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader'
-import { Router, Link } from 'react-static'
+import { Router, Link, NavLink } from 'react-static'
 import Routes from 'react-static-routes'
 
 import {
@@ -22,6 +22,8 @@ import {
 
 import 'semantic-ui-css/semantic.min.css'
 import './app.css'
+
+import logo from './assets/logo.png'
 
 import Home from './containers/Home'
 
@@ -47,11 +49,11 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item><Link to='/'>Home</Link></Menu.Item>
-                <Menu.Item><Link to='/product'>Product</Link></Menu.Item>
-                <Menu.Item><Link to='/services'>Services</Link></Menu.Item>
-                <Menu.Item><Link to='/training'>Training</Link></Menu.Item>
-                <Menu.Item><Link to='/about'>About</Link></Menu.Item>
+                <Menu.Item as={NavLink} to='/' exact>Home</Menu.Item>
+                <Menu.Item as={NavLink} to='/product' exact>Product</Menu.Item>
+                <Menu.Item as={NavLink} to='/services' exact>Services</Menu.Item>
+                <Menu.Item as={NavLink} to='/training' exact>Training</Menu.Item>
+                <Menu.Item as={NavLink} to='/about' exact>About</Menu.Item>
               </Container>
             </Menu>
           </Segment>
@@ -71,6 +73,12 @@ class MobileContainer extends Component {
 
   handleToggle = () => this.setState({ sidebarOpened: !this.state.sidebarOpened })
 
+  handleClose = () => {
+    if(this.state.sidebarOpened) {
+      this.setState({ sidebarOpened: false })
+    }
+  }
+
   render() {
     const { children } = this.props
     const { sidebarOpened } = this.state
@@ -78,21 +86,26 @@ class MobileContainer extends Component {
     return (
       <Responsive {...Responsive.onlyMobile}>
         <Sidebar.Pushable>
-          <Sidebar as={Menu} inverted vertical visible={sidebarOpened} onClick={this.handleToggle}>
-            <Menu.Item><Link to='/'>Home</Link></Menu.Item>
-            <Menu.Item><Link to='/product'>Product</Link></Menu.Item>
-            <Menu.Item><Link to='/services'>Services</Link></Menu.Item>
-            <Menu.Item><Link to='/training'>Training</Link></Menu.Item>
-            <Menu.Item><Link to='/about'>About</Link></Menu.Item>
+          <Sidebar as={Menu} inverted vertical visible={sidebarOpened} onClick={this.handleClose}>
+            <Menu.Item as={NavLink} to='/' exact>Home</Menu.Item>
+            <Menu.Item as={NavLink} to='/product' exact>Product</Menu.Item>
+            <Menu.Item as={NavLink} to='/services' exact>Services</Menu.Item>
+            <Menu.Item as={NavLink} to='/training' exact>Training</Menu.Item>
+            <Menu.Item as={NavLink} to='/about' exact>About</Menu.Item>
           </Sidebar>
 
-          <Sidebar.Pusher dimmed={sidebarOpened} onClick={this.handleToggle} style={{ minHeight: '100vh' }}>
+          <Sidebar.Pusher dimmed={sidebarOpened} style={{ minHeight: '100vh' }} onClick={this.handleClose}>
             <Segment inverted textAlign='center' style={{ padding: '1em 0em' }} vertical>
               <Container>
                 <Menu inverted pointing secondary size='large'>
                   <Menu.Item onClick={this.handleToggle}>
                     <Icon name='sidebar' />
                   </Menu.Item>
+                  <Menu inverted floated='right'>
+                    <Menu.Item>
+                      <Image src={logo} size='mini' />
+                    </Menu.Item>
+                  </Menu>
                 </Menu>
               </Container>
             </Segment>
@@ -124,11 +137,11 @@ const Footer = () => (
           <Grid.Column width={3}>
             <Header inverted as='h4' content='Links' />
             <List link inverted>
-              <List.Item><Link to='/'>Home</Link></List.Item>
-              <List.Item><Link to='/product'>Product</Link></List.Item>
-              <List.Item><Link to='/services'>Services</Link></List.Item>
-              <List.Item><Link to='/training'>Training</Link></List.Item>
-              <List.Item><Link to='/about'>About</Link></List.Item>
+              <List.Item as={NavLink} to='/' exact>Home</List.Item>
+              <List.Item as={NavLink} to='/product' exact>Product</List.Item>
+              <List.Item as={NavLink} to='/services' exact>Services</List.Item>
+              <List.Item as={NavLink} to='/training' exact>Training</List.Item>
+              <List.Item as={NavLink} to='/about' exact>About</List.Item>
             </List>
           </Grid.Column>
           <Grid.Column width={7}>
