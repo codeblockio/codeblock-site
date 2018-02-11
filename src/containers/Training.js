@@ -8,7 +8,6 @@ import {
   Grid,
   Button
 } from 'semantic-ui-react'
-import { Link } from 'react-static'
 import Layout from '../components/Layout'
 
 export default getSiteData(() => (
@@ -16,15 +15,7 @@ export default getSiteData(() => (
     <Grid container stackable verticalAlign='middle'>
       <Grid.Row>
         <Grid.Column>
-          <Header as='h1'>Oops! That doesn't exist</Header>
-          <p>
-            Sorry, the page you are looking for doesn't exist!
-          </p>
-        </Grid.Column>
-      </Grid.Row>
-      <Grid.Row>
-        <Grid.Column textAlign='center'>
-          <Link to='/'><Button size='huge'>Home</Button></Link>
+          <Header as='h1'>Training</Header>
         </Grid.Column>
       </Grid.Row>
     </Grid>
