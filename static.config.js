@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 export default {
-  getSiteProps: () => ({
+  preact: true,
+  getSiteData: () => ({
     title: 'CodeBlock | Everything-as-Code',
   }),
   siteRoot: 'https://alpha.codeblock.io',

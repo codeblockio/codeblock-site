@@ -1,5 +1,9 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import { hot } from 'react-hot-loader'
+import { Router, Link } from 'react-static'
+import Routes from 'react-static-routes'
+
 import {
   Button,
   Container,
@@ -98,7 +102,6 @@ class DesktopContainer extends Component {
             <HomepageHeading />
           </Segment>
         </Visibility>
-
         {children}
       </Responsive>
     )
@@ -147,7 +150,6 @@ class MobileContainer extends Component {
               </Container>
               <HomepageHeading mobile />
             </Segment>
-
             {children}
           </Sidebar.Pusher>
         </Sidebar.Pushable>
@@ -164,7 +166,33 @@ const ResponsiveContainer = ({ children }) => (
   <div>
     <DesktopContainer>{children}</DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
+    <Footer/>
   </div>
+)
+
+const Footer = () => (
+  <Segment inverted vertical style={{ padding: '5em 0em' }}>
+    <Container>
+      <Grid divided inverted stackable>
+        <Grid.Row>
+          <Grid.Column width={3}>
+            <Header inverted as='h4' content='Links' />
+            <List link inverted>
+              <List.Item as='a'>Vision</List.Item>
+              <List.Item as='a'>Product</List.Item>
+              <List.Item as='a'>Services</List.Item>
+              <List.Item as='a'>Training</List.Item>
+              <List.Item as='a'>About</List.Item>
+            </List>
+          </Grid.Column>
+          <Grid.Column width={7}>
+            <Header as='h4' inverted>CodeBlock | Everything-as-Code</Header>
+            <p>Turbocharge your DevSecOps</p>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Container>
+  </Segment>
 )
 
 ResponsiveContainer.propTypes = {
@@ -172,31 +200,9 @@ ResponsiveContainer.propTypes = {
 }
 
 const HomepageLayout = () => (
-  <ResponsiveContainer>
-
-    <Segment inverted vertical style={{ padding: '5em 0em' }}>
-      <Container>
-        <Grid divided inverted stackable>
-          <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Links' />
-              <List link inverted>
-                <List.Item as='a'>Vision</List.Item>
-                <List.Item as='a'>Product</List.Item>
-                <List.Item as='a'>Services</List.Item>
-                <List.Item as='a'>Training</List.Item>
-                <List.Item as='a'>About</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={7}>
-              <Header as='h4' inverted>CodeBlock</Header>
-              <p>Turbocharge your DevSecOps</p>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
-    </Segment>
-  </ResponsiveContainer>
+  <Router>
+    <ResponsiveContainer/>
+  </Router>
 )
 
-export default HomepageLayout
+export default hot(module)(HomepageLayout)

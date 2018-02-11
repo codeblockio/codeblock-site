@@ -8,24 +8,13 @@ import App from './App'
 // Export top level component as JSX (for static rendering)
 export default App
 
-// Render app
+// Render your app
 if (typeof document !== 'undefined') {
+  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
   const render = Comp => {
-    ReactDOM.hydrate(
-      <AppContainer>
-        <Comp />
-      </AppContainer>,
-      document.getElementById('root'),
-    )
+    renderMethod(<Comp />, document.getElementById('root'))
   }
 
   // Render!
   render(App)
-
-  // Hot Module Replacement
-  if (module.hot) {
-    module.hot.accept('./App', () => {
-      render(require('./App').default)
-    })
-  }
 }
