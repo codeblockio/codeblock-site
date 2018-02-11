@@ -1,5 +1,5 @@
 import React from 'react'
-import { getSiteData } from 'react-static'
+import { withSiteData } from 'react-static'
 import {
   Segment,
   Container,
@@ -11,7 +11,7 @@ import {
 import { Link } from 'react-static'
 import Layout from '../components/Layout'
 
-export default getSiteData(() => (
+export default withSiteData(() => (
   <Layout>
     <Grid container stackable verticalAlign='middle'>
       <Grid.Row>
