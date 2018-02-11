@@ -1,7 +1,6 @@
 import React from 'react'
 import { Router, Link } from 'react-static'
 import Routes from 'react-static-routes'
-import 'semantic-ui-css/semantic.min.css'
 import {
   Menu,
   Container,
@@ -13,9 +12,7 @@ import {
   Segment
 } from 'semantic-ui-react'
 
-import image from './assets/code-wallpaper-17.jpg'
-import logo from './assets/logo.png'
-
+import 'semantic-ui-css/semantic.min.css'
 import './app.css'
 
 const FixedMed = () => (
@@ -27,6 +24,7 @@ const FixedMed = () => (
         CodeBlock
       </Menu.Item>
       <Menu.Item as='a'>Vision</Menu.Item>
+      <Menu.Item as='a'>Services</Menu.Item>
       <Menu.Item as='a'>Product</Menu.Item>
       <Menu.Item as='a'>Training</Menu.Item>
       <Menu.Item as='a'>Blog</Menu.Item>
@@ -63,6 +61,7 @@ export default class App extends React.Component {
                 <Menu inverted pointing secondary size='large'>
                   <Menu.Item header as='a'>Home</Menu.Item>
                   <Menu.Item as='a'>Vision</Menu.Item>
+                  <Menu.Item as='a'>Services</Menu.Item>
                   <Menu.Item as='a'>Product</Menu.Item>
                   <Menu.Item as='a'>Training</Menu.Item>
                   <Menu.Item as='a'>Blog</Menu.Item>
