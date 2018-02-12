@@ -15,6 +15,10 @@ export default {
         component: 'src/containers/Home',
       },
       {
+        path: '/journey',
+        component: 'src/containers/Journey',
+      },
+      {
         path: '/product',
         component: 'src/containers/Product',
       },

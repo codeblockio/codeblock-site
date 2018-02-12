@@ -8,6 +8,8 @@ import {
   Icon,
   Responsive
 } from 'semantic-ui-react'
+import { NavLink } from 'react-static'
+
 import Layout from '../components/Layout'
 
 const styles = {
@@ -68,7 +70,7 @@ export default withSiteData(() => {
           <Content />
         </Responsive>
 
-        <Button primary size='huge'>
+        <Button primary size='huge' as={NavLink} to='/journey'>
           Get Started
           <Icon name='right arrow' />
         </Button>
