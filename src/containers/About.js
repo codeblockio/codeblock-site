@@ -8,6 +8,7 @@ import {
   Grid,
   Button,
   Icon,
+  Form,
 } from 'semantic-ui-react'
 import Layout from '../components/Layout'
 
@@ -74,6 +75,22 @@ export default withSiteData(() => (
       <Grid.Row>
         <Grid.Column>
           <Header as='h2'>Contact</Header>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Form onSubmit={() => console.log('Foo')}>
+            <Form.Group widths='equal'>
+              <Form.Input fluid label='Name' placeholder='Joe' />
+              <Form.Input fluid label='Organization' placeholder='Acme Inc' />
+            </Form.Group>
+            <Form.Group widths='equal'>
+              <Form.Input fluid label='Email Address' placeholder='you@yourcompany.com'/>
+              <Form.Input fluid label='Phone Number' placeholder='240-123-4567'/>
+            </Form.Group>
+            <Form.TextArea label='Message' placeholder='Tell us more about you' />
+            <Form.Button>Submit</Form.Button>
+          </Form>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
