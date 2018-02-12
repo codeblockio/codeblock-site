@@ -5980,6 +5980,16 @@ react-static@^5:
     webpack-flush-chunks "^1.2.3"
     webpack-node-externals "^1.6.0"
 
+react-typist-loop@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/react-typist-loop/-/react-typist-loop-0.0.5.tgz#eb5ae82ba001557afb72236e3187d6dc10f0c1c0"
+
+react-typist@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-typist/-/react-typist-2.0.4.tgz#e7ee4de53ead913d363d38f07b700c00ce271be0"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-universal-component@^2.8.1:
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/react-universal-component/-/react-universal-component-2.8.2.tgz#defe2382a9b1a2b59d1e1bbe149e3ff5223de6b0"

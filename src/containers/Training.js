@@ -18,6 +18,14 @@ export default withSiteData(() => (
           <Header as='h1'>Training</Header>
         </Grid.Column>
       </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Header as='h2'>DevSecOps</Header>
+
+          <p>DevSecOps is a paradigm shift enabled by Open Source technologies.</p>
+          <p>Contact us for more information on how to structure a custom training schedule.</p>
+        </Grid.Column>
+      </Grid.Row>
     </Grid>
   </Layout>
 ))
