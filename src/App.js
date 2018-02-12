@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader'
-import { Router, Link, NavLink } from 'react-static'
+import { Router, NavLink, Head, withSiteData } from 'react-static'
 import Routes from 'react-static-routes'
 
 import {
@@ -158,12 +158,15 @@ ResponsiveContainer.propTypes = {
   children: PropTypes.node,
 }
 
-const HomepageLayout = () => (
+const HomepageLayout = ({ siteTitle }) => (
   <Router>
     <ResponsiveContainer>
+      <Head>
+        <title>{siteTitle || 'CodeBlock'}</title>
+      </Head>
       <Routes/>
     </ResponsiveContainer>
   </Router>
 )
 
-export default hot(module)(HomepageLayout)
+export default hot(module)(withSiteData(HomepageLayout))

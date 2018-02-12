@@ -1,9 +1,10 @@
 import axios from 'axios'
+import React, { Component } from 'react'
 
 export default {
   preact: true,
   withSiteData: () => ({
-    title: 'CodeBlock | Everything-as-Code',
+    siteTitle: 'CodeBlock | Everything-as-Code',
   }),
   siteRoot: 'https://alpha.codeblock.io',
   getRoutes: async () => {
@@ -33,5 +34,5 @@ export default {
         component: 'src/containers/404',
       },
     ]
-  },
+  }
 }
