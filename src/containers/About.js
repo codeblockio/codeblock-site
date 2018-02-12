@@ -13,12 +13,38 @@ import Layout from '../components/Layout'
 
 import abhi from '../assets/abhi.jpg'
 
+import { compose, withProps } from "recompose"
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+
+const Map = compose(
+  withProps({
+    googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
+    loadingElement: <div style={{ height: `100%` }} />,
+    containerElement: <div style={{ height: `400px` }} />,
+    mapElement: <div style={{ height: `100%` }} />,
+  }),
+  withScriptjs,
+  withGoogleMap
+)((props) =>
+  <GoogleMap
+    defaultZoom={15}
+    defaultCenter={{ lat: props.lat, lng: props.lng }}
+  >
+    {props.isMarkerShown && <Marker position={{ lat: props.lat, lng: props.lng }} />}
+  </GoogleMap>
+)
+
 export default withSiteData(() => (
   <Layout>
     <Grid container stackable verticalAlign='middle'>
       <Grid.Row>
         <Grid.Column>
           <Header as='h1'>About</Header>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Header as='h2'>Team</Header>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
@@ -43,6 +69,21 @@ export default withSiteData(() => (
               <Icon name='mail' bordered circular inverted link/>
             </a>
           </p>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Header as='h2'>Contact</Header>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Header as='h2'>Location</Header>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column>
+          <Map lat={38.923590} lng={-77.220486} isMarkerShown/>
         </Grid.Column>
       </Grid.Row>
     </Grid>
