@@ -6,7 +6,10 @@ import {
   Header,
   Button,
   Icon,
-  Responsive
+  Responsive,
+  Grid,
+  Input,
+  Form,
 } from 'semantic-ui-react'
 import { NavLink } from 'react-static'
 
@@ -30,7 +33,7 @@ const styles = {
 const mobileStyles = {
   h1: {
     ...styles.h1,
-    fontSize: '2em',
+    fontSize: '2.5em',
     marginTop: '3em',
   },
   h2: {
@@ -60,20 +63,35 @@ const Content = ({ mobile = false }) => (
 
 export default withSiteData(() => {
   return (
-    <Layout inverted textAlign='center'>
-      <Container text>
-        <Responsive {...Responsive.onlyMobile}>
-          <Content mobile/>
-        </Responsive>
+    <Layout inverted>
+      <Container>
+        <Grid inverted stackable>
+          <Grid.Row>
+            <Grid.Column width={10}>
+              <Responsive {...Responsive.onlyMobile}>
+                <Content mobile/>
+              </Responsive>
 
-        <Responsive {...Responsive.onlyComputer}>
-          <Content />
-        </Responsive>
+              <Responsive {...Responsive.onlyComputer}>
+                <Content />
+              </Responsive>
 
-        <Button primary size='huge' as={NavLink} to='/journey'>
-          Get Started
-          <Icon name='right arrow' />
-        </Button>
+              <Form onSubmit={() => {}}>
+                <Form.Group widths='equal'>
+                  <Form.Input name='signUpEmail' inverted size='huge'
+                    type='email'
+                    icon='mail' placeholder='Enter your email'
+                    required
+                  />
+                  <Form.Button primary size='huge' type='submit'>
+                    Get Early Access
+                    <Icon name='right arrow' />
+                  </Form.Button>
+                </Form.Group>
+              </Form>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </Container>
     </Layout>
   )
