@@ -1,3 +1,4 @@
+import Promise from 'promise-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
@@ -7,6 +8,10 @@ import App from './App'
 
 // Export top level component as JSX (for static rendering)
 export default App
+
+if (typeof window !== "undefined" && !window.Promise) {
+  window.Promise = Promise;
+}
 
 // Render your app
 if (typeof document !== 'undefined') {
