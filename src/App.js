@@ -49,7 +49,6 @@ class DesktopContainer extends Component {
             <Container>
               <Menu.Item as={NavLink} to='/' exact>Home</Menu.Item>
               <Menu.Item as={NavLink} to='/product' exact>Product</Menu.Item>
-              <Menu.Item as={NavLink} to='/services' exact>Services</Menu.Item>
               <Menu.Item as={NavLink} to='/training' exact>Training</Menu.Item>
               <Menu.Item as={NavLink} to='/about' exact>About</Menu.Item>
             </Container>
@@ -88,7 +87,6 @@ class MobileContainer extends Component {
           >
             <Menu.Item as={NavLink} to='/' exact>Home</Menu.Item>
             <Menu.Item as={NavLink} to='/product' exact>Product</Menu.Item>
-            <Menu.Item as={NavLink} to='/services' exact>Services</Menu.Item>
             <Menu.Item as={NavLink} to='/training' exact>Training</Menu.Item>
             <Menu.Item as={NavLink} to='/about' exact>About</Menu.Item>
           </Sidebar>
