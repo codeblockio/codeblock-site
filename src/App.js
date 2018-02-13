@@ -97,7 +97,7 @@ class MobileContainer extends Component {
             <Segment inverted textAlign='center' style={{ padding: '1em 0em' }} vertical>
               <Container>
                 <Menu inverted pointing secondary size='large'>
-                  <Menu.Item>
+                  <Menu.Item as={NavLink} to='/' style={{borderBottom: 0}}>
                     <Image src={logo} size='mini' />
                   </Menu.Item>
                   <Menu inverted floated='right'>
