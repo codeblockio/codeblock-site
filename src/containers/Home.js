@@ -10,17 +10,21 @@ import {
   Grid,
   Input,
   Form,
+  Image,
 } from 'semantic-ui-react'
 import { NavLink } from 'react-static'
 
+import logo from '../assets/logo.png'
 import Layout from '../components/Layout'
 
 const styles = {
+  logo: {
+    marginTop: '3em',
+  },
   h1: {
     fontSize: '4em',
     fontWeight: 'normal',
     marginBottom: 0,
-    marginTop: '3em',
   },
   h2: {
     fontSize: '1.7em',
@@ -34,7 +38,7 @@ const mobileStyles = {
   h1: {
     ...styles.h1,
     fontSize: '2.5em',
-    marginTop: '3em',
+    marginTop: '0em',
   },
   h2: {
     ...styles.h2,
@@ -66,6 +70,16 @@ export default withSiteData(() => {
     <Layout inverted>
       <Container>
         <Grid inverted stackable>
+          <Grid.Row>
+            <Grid.Column>
+              <Responsive {...Responsive.onlyMobile}>
+                <Image src={logo} size='medium' centered style={styles.logo}/>
+              </Responsive>
+              <Responsive {...Responsive.onlyComputer}>
+                <Image src={logo} size='medium' style={styles.logo}/>
+              </Responsive>
+            </Grid.Column>
+          </Grid.Row>
           <Grid.Row>
             <Grid.Column width={10}>
               <Responsive {...Responsive.onlyMobile}>
