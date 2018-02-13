@@ -85,7 +85,7 @@ class MobileContainer extends Component {
     return (
       <Responsive {...Responsive.onlyMobile}>
         <Sidebar.Pushable>
-          <Sidebar as={Menu} inverted vertical visible={sidebarOpened} onClick={this.handleClose}>
+          <Sidebar as={Menu} direction='right' inverted vertical visible={sidebarOpened} onClick={this.handleClose}>
             <Menu.Item as={NavLink} to='/' exact>Home</Menu.Item>
             <Menu.Item as={NavLink} to='/product' exact>Product</Menu.Item>
             <Menu.Item as={NavLink} to='/services' exact>Services</Menu.Item>
@@ -97,12 +97,12 @@ class MobileContainer extends Component {
             <Segment inverted textAlign='center' style={{ padding: '1em 0em' }} vertical>
               <Container>
                 <Menu inverted pointing secondary size='large'>
-                  <Menu.Item onClick={this.handleToggle}>
-                    <Icon name='sidebar' />
+                  <Menu.Item>
+                    <Image src={logo} size='mini' />
                   </Menu.Item>
                   <Menu inverted floated='right'>
-                    <Menu.Item>
-                      <Image src={logo} size='mini' />
+                    <Menu.Item onClick={this.handleToggle}>
+                      <Icon name='sidebar' />
                     </Menu.Item>
                   </Menu>
                 </Menu>
