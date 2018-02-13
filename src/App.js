@@ -131,21 +131,13 @@ const ResponsiveContainer = ({ children }) => (
 const Footer = () => (
   <Segment inverted vertical style={{ padding: '5em 0em' }}>
     <Container>
-      <Grid divided inverted stackable>
+      <Grid inverted stackable>
         <Grid.Row>
           <Grid.Column width={3}>
-            <Header inverted as='h4' content='Links' />
-            <List link inverted>
-              <List.Item as={NavLink} to='/' exact>Home</List.Item>
-              <List.Item as={NavLink} to='/product' exact>Product</List.Item>
-              <List.Item as={NavLink} to='/services' exact>Services</List.Item>
-              <List.Item as={NavLink} to='/training' exact>Training</List.Item>
-              <List.Item as={NavLink} to='/about' exact>About</List.Item>
-            </List>
+            <p>Copyright &copy; {new Date().getFullYear()} CodeBlock</p>
           </Grid.Column>
-          <Grid.Column width={7}>
-            <Header as='h4' inverted>CodeBlock | Everything-as-Code</Header>
-            <p>Turbocharge your DevSecOps</p>
+          <Grid.Column width={13} textAlign='right'>
+
           </Grid.Column>
         </Grid.Row>
       </Grid>
