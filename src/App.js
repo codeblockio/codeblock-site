@@ -85,7 +85,9 @@ class MobileContainer extends Component {
     return (
       <Responsive {...Responsive.onlyMobile}>
         <Sidebar.Pushable>
-          <Sidebar as={Menu} direction='right' inverted vertical visible={sidebarOpened} onClick={this.handleClose}>
+          <Sidebar as={Menu} animation='overlay' direction='right' inverted
+            vertical visible={sidebarOpened} onClick={this.handleClose}
+          >
             <Menu.Item as={NavLink} to='/' exact>Home</Menu.Item>
             <Menu.Item as={NavLink} to='/product' exact>Product</Menu.Item>
             <Menu.Item as={NavLink} to='/services' exact>Services</Menu.Item>
