@@ -45,13 +45,13 @@ const Content = ({ mobile = false }) => (
   <div>
     <Header
       as='h1'
-      content='Everything-as-Code'
+      content='DevSecOps Delivered'
       inverted
       style={mobile ? mobileStyles.h1 : styles.h1}
     />
     <Header
       as='h2'
-      content='Turbocharge your DevSecOps'
+      content='Flexible, consistent workflows to enable teams to train and succeed at DevSecOps'
       inverted
       style={mobile ? mobileStyles.h2 : styles.h2}
     />
