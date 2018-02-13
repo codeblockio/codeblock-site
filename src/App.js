@@ -38,25 +38,23 @@ class DesktopContainer extends Component {
 
     return (
       <Responsive {...Responsive.onlyComputer}>
-        <Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
-          <Segment inverted textAlign='center' style={{ padding: '1em 0em' }} vertical>
-            <Menu
-              fixed={fixed ? 'top' : null}
-              inverted
-              pointing={!fixed}
-              secondary={!fixed}
-              size='large'
-            >
-              <Container>
-                <Menu.Item as={NavLink} to='/' exact>Home</Menu.Item>
-                <Menu.Item as={NavLink} to='/product' exact>Product</Menu.Item>
-                <Menu.Item as={NavLink} to='/services' exact>Services</Menu.Item>
-                <Menu.Item as={NavLink} to='/training' exact>Training</Menu.Item>
-                <Menu.Item as={NavLink} to='/about' exact>About</Menu.Item>
-              </Container>
-            </Menu>
-          </Segment>
-        </Visibility>
+        <Segment inverted textAlign='center' style={{ padding: '1em 0em' }} vertical>
+          <Menu
+            fixed={fixed ? 'top' : null}
+            inverted
+            pointing={!fixed}
+            secondary={!fixed}
+            size='large'
+          >
+            <Container>
+              <Menu.Item as={NavLink} to='/' exact>Home</Menu.Item>
+              <Menu.Item as={NavLink} to='/product' exact>Product</Menu.Item>
+              <Menu.Item as={NavLink} to='/services' exact>Services</Menu.Item>
+              <Menu.Item as={NavLink} to='/training' exact>Training</Menu.Item>
+              <Menu.Item as={NavLink} to='/about' exact>About</Menu.Item>
+            </Container>
+          </Menu>
+        </Segment>
         {children}
       </Responsive>
     )
