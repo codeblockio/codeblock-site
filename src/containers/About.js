@@ -36,28 +36,7 @@ const Map = compose(
   </GoogleMap>
 )
 
-
 class About extends React.Component {
-  state = { name: '', email: '', organization: '', phone: '', message: '', submitted: false }
-
-  handleChange = (e, { name, value }) => this.setState({ [name]: value })
-
-  submitForm = () => {
-    _slaask.message(`I'm ${this.state.name} from ${this.state.organization} and I'd like to reach out:\n${this.state.message}\nMy contact information is ${this.state.email} ${this.state.phone.length > 0 ? `or ${this.state.phone}` : ''}`)
-    this.resetForm(true)
-  }
-
-  resetForm = (submitted) => {
-    this.setState({
-      name: '',
-      email: '',
-      organization: '',
-      phone: '',
-      message: '',
-      submitted
-    })
-  }
-
   render() {
     return (
       <Layout>
@@ -94,36 +73,6 @@ class About extends React.Component {
                   <Icon name='mail' bordered circular inverted link/>
                 </a>
               </p>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column>
-              <Header as='h2'>Contact</Header>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column>
-              <Form onSubmit={this.submitForm}>
-                <Form.Group widths='equal'>
-                  <Form.Input fluid label='Name' name='name' placeholder='Joe' value={this.state.name} onChange={this.handleChange} required />
-                  <Form.Input fluid label='Organization' name='organization' placeholder='Acme Inc' value={this.state.organization} onChange={this.handleChange} required />
-                </Form.Group>
-                <Form.Group widths='equal'>
-                  <Form.Input fluid label='Email Address' name='email' placeholder='you@yourcompany.com' value={this.state.email} onChange={this.handleChange} required />
-                  <Form.Input fluid label='Phone Number' name='phone' placeholder='240-123-4567' value={this.state.phone} onChange={this.handleChange} />
-                </Form.Group>
-                <Form.TextArea label='Message' name='message' placeholder='Tell us more about you' value={this.state.message} onChange={this.handleChange} required />
-                <Form.Button>Submit</Form.Button>
-              </Form>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column>
-              {
-                this.state.submitted && (
-                  <Label color='green'>Thank you for your inquiry! We'll be in touch shortly.</Label>
-                )
-              }
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
