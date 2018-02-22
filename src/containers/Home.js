@@ -39,12 +39,13 @@ const mobileStyles = {
     ...styles.h1,
     fontSize: '2.5em',
     marginTop: '0em',
+    textAlign: 'center'
   },
   h2: {
     ...styles.h2,
     fontSize: '1.5em',
     marginTop: '0.5em',
-    marginBottom: '0.5em'
+    marginBottom: '0.5em',
   }
 }
 
