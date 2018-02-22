@@ -86,7 +86,7 @@ class SignupForm extends React.Component {
             <Form.Input
               name='FNAME'
               inverted
-              size='huge'
+              size='big'
               placeholder='First name'
             />
           </Form.Field>
@@ -94,7 +94,7 @@ class SignupForm extends React.Component {
             <Form.Input
               name='LNAME'
               inverted
-              size='huge'
+              size='big'
               placeholder='Last name'
             />
           </Form.Field>
@@ -103,7 +103,7 @@ class SignupForm extends React.Component {
           <Form.Input
             name='EMAIL'
             inverted
-            size='huge'
+            size='big'
             type='email'
             icon='mail'
             placeholder='Enter your email'
@@ -111,8 +111,8 @@ class SignupForm extends React.Component {
           />
         </Form.Field>
         <Form.Group>
-          <Form.Button primary size='huge' type='submit'>
-            Get Early Access
+          <Form.Button primary size='massive' type='submit'>
+            Get Early Access!
             <Icon name='right arrow' />
           </Form.Button>
         </Form.Group>
