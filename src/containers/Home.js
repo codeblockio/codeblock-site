@@ -65,6 +65,62 @@ const Content = ({ mobile = false }) => (
   </div>
 )
 
+class SignupForm extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      signUpEmail: ''
+    }
+  }
+
+  render () {
+    return (
+      <Form
+        method='post'
+        action='https://codeblock.us9.list-manage.com/subscribe/post?u=324e1a3fe19d544c10b41d619&amp;id=ef231932eb'
+        target='_blank'
+      >
+        <Form.Group widths='equal'>
+          <Form.Field>
+            <Form.Input
+              name='FNAME'
+              inverted
+              size='huge'
+              placeholder='First name'
+            />
+          </Form.Field>
+          <Form.Field>
+            <Form.Input
+              name='LNAME'
+              inverted
+              size='huge'
+              placeholder='Last name'
+            />
+          </Form.Field>
+        </Form.Group>
+        <Form.Field>
+          <Form.Input
+            name='EMAIL'
+            inverted
+            size='huge'
+            type='email'
+            icon='mail'
+            placeholder='Enter your email'
+            required
+          />
+        </Form.Field>
+        <Form.Group>
+          <Form.Button primary size='huge' type='submit'>
+            Get Early Access
+            <Icon name='right arrow' />
+          </Form.Button>
+        </Form.Group>
+      </Form>
+    )
+  }
+}
+
 export default withSiteData(() => {
   return (
     <Layout inverted>
@@ -90,19 +146,7 @@ export default withSiteData(() => {
                 <Content />
               </Responsive>
 
-              <Form onSubmit={() => {}}>
-                <Form.Group widths='equal'>
-                  <Form.Input name='signUpEmail' inverted size='huge'
-                    type='email'
-                    icon='mail' placeholder='Enter your email'
-                    required
-                  />
-                  <Form.Button primary size='huge' type='submit'>
-                    Get Early Access
-                    <Icon name='right arrow' />
-                  </Form.Button>
-                </Form.Group>
-              </Form>
+              <SignupForm />
             </Grid.Column>
           </Grid.Row>
         </Grid>

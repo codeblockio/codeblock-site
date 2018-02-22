@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 
-body, .ui.header, .ui.button, .ui.menu, .ui.form input[type=text], textarea, p, h2, h3, h4, h5, h6 {
+body,
+.ui.header,
+.ui.button,
+.ui.menu,
+.ui.form input[type=email],
+.ui.form input[type=text],
+textarea,
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Inconsolata', monospace;
 }
