@@ -22,6 +22,10 @@ export default {
         component: 'src/containers/Training',
       },
       {
+        path: '/reference-architectures',
+        component: 'src/containers/RefArchitecture',
+      },
+      {
         path: '/about',
         component: 'src/containers/About',
       },
