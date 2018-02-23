@@ -22,7 +22,7 @@ export default withSiteData(() => (
       </Grid.Row>
       <Grid.Row>
         <Grid.Column>
-          <Header as='h2'><Image src={codifi} size='small'/>Codifi</Header>
+          <Header as='h2'><Image src={codifi} size='small'/>Quasar</Header>
           <p>
             A complete and opinionated DevSecOps training platform for your
             organization to quickly ideate, build, test, deploy, monitor, measure, and manage applications.
