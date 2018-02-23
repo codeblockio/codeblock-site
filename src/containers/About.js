@@ -78,6 +78,7 @@ class About extends React.Component {
           <Grid.Row>
             <Grid.Column>
               <Header as='h2'>Location</Header>
+              <p>1775 Tysons Blvd Suite 500<br/>Tysons, VA 22102</p>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
