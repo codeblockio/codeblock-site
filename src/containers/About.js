@@ -83,7 +83,10 @@ class About extends React.Component {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
-              <ReactTypeformEmbed url='https://codeblockio.typeform.com/to/ZXy5e4'/>
+              <p>Drop us a line at <a href="mailto:contact@codeblock.io">contact@codeblock.io</a> and see how we can work for you!</p>
+              <Form method="get" action="https://codeblockio.typeform.com/to/ZXy5e4" target="_blank"> 
+              <Form.Button primary size='huge' type='submit'>Contact Us</Form.Button>
+              </Form>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
