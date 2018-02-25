@@ -12,6 +12,7 @@ import {
   Label,
 } from 'semantic-ui-react'
 import Layout from '../components/Layout'
+import { ReactTypeformEmbed } from 'react-typeform-embed'
 
 import abhi from '../assets/abhi.jpg'
 
@@ -73,6 +74,16 @@ class About extends React.Component {
                   <Icon name='mail' bordered circular inverted link/>
                 </a>
               </p>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <Header as='h2'>Contact</Header>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <ReactTypeformEmbed url='https://codeblockio.typeform.com/to/ZXy5e4'/>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
