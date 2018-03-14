@@ -22,8 +22,8 @@ export default {
         component: 'src/containers/Training',
       },
       {
-        path: '/reference-architectures',
-        component: 'src/containers/RefArchitecture',
+        path: '/opensource',
+        component: 'src/containers/OpenSource',
       },
       {
         path: '/about',

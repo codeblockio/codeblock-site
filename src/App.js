@@ -50,7 +50,7 @@ class DesktopContainer extends Component {
               <Menu.Item as={NavLink} to='/' exact>Home</Menu.Item>
               <Menu.Item as={NavLink} to='/product' exact>Product</Menu.Item>
               <Menu.Item as={NavLink} to='/training' exact>Training</Menu.Item>
-              <Menu.Item as={NavLink} to='/reference-architectures' exact>Reference Architectures</Menu.Item>
+              <Menu.Item as={NavLink} to='/opensource' exact>Open Source</Menu.Item>
               <Menu.Item as={NavLink} to='/about' exact>About</Menu.Item>
             </Container>
           </Menu>
@@ -89,7 +89,7 @@ class MobileContainer extends Component {
             <Menu.Item as={NavLink} to='/' exact>Home</Menu.Item>
             <Menu.Item as={NavLink} to='/product' exact>Product</Menu.Item>
             <Menu.Item as={NavLink} to='/training' exact>Training</Menu.Item>
-            <Menu.Item as={NavLink} to='/reference-architectures' exact>Reference Architectures</Menu.Item>
+            <Menu.Item as={NavLink} to='/opensource' exact>Open Source</Menu.Item>
             <Menu.Item as={NavLink} to='/about' exact>About</Menu.Item>
           </Sidebar>
 
