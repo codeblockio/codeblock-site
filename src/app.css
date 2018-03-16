@@ -16,3 +16,7 @@ h5,
 h6 {
   font-family: 'Inconsolata', monospace;
 }
+
+p {
+  font-size: 1.2em;
+}
