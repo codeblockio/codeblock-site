@@ -14,10 +14,6 @@ export default {
         component: 'src/containers/Home',
       },
       {
-        path: '/product',
-        component: 'src/containers/Product',
-      },
-      {
         path: '/training',
         component: 'src/containers/Training',
       },
