@@ -59,7 +59,11 @@ const Content = ({ mobile = false }) => (
     />
     <Header
       as='h2'
-      content='Flexible, consistent workflows to enable teams to train and succeed at DevSecOps'
+      content={
+        <span>
+          Flexible, consistent <a href="https://cncf.io/" target="_blank">Cloud-Native</a> workflows to enable teams to train and succeed at DevSecOps
+        </span>
+      }
       inverted
       style={mobile ? mobileStyles.h2 : styles.h2}
     />
