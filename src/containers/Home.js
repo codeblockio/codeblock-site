@@ -61,7 +61,7 @@ const Content = ({ mobile = false }) => (
       as='h2'
       content={
         <span>
-          Flexible, consistent <a href="https://cncf.io/" target="_blank">Cloud-Native</a> workflows to enable teams to train and succeed at DevSecOps
+          Flexible, consistent <a href="https://cncf.io/" target="_blank">Cloud-Native</a>, <a href="https://github.com/cncf/wg-serverless" target="_blank">Serverless</a> workflows to enable teams to train and succeed at <a href="http://www.devsecops.org/" target="_blank">DevSecOps</a>
         </span>
       }
       inverted
