@@ -53,7 +53,7 @@ const Content = ({ mobile = false }) => (
   <div>
     <Header
       as='h1'
-      content='DevSecOps Delivered'
+      content='DevExp Delivered'
       inverted
       style={mobile ? mobileStyles.h1 : styles.h1}
     />
